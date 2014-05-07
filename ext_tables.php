@@ -9,10 +9,11 @@ $tempColumns = array(
 		'label' => 'LLL:EXT:robots/locallang_db.xml:pages.tx_robots_flags',
 		'config' => array(
 			'type' => 'check',
-			'cols' => 2,
+			'cols' => 3,
 			'items' => array(
 				array('LLL:EXT:robots/locallang_db.xml:pages.tx_robots_flags.I.0', ''),
 				array('LLL:EXT:robots/locallang_db.xml:pages.tx_robots_flags.I.1', ''),
+				array('LLL:EXT:robots/locallang_db.xml:pages.tx_robots_flags.I.2', ''),
 			),
 		)
 	),
@@ -21,6 +22,6 @@ $tempColumns = array(
 
 t3lib_div::loadTCA('pages');
 t3lib_extMgm::addTCAcolumns('pages', $tempColumns, 1);
+//t3lib_extMgm::addToAllTCAtypes('pages','tx_robots_flags;;;;1-1-1', '', 'after:fe_login_mode');
 t3lib_extMgm::addToAllTCAtypes('pages','tx_robots_flags;;;;1-1-1', '1,2', 'before:TSconfig');
-
 ?>
