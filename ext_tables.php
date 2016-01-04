@@ -22,6 +22,5 @@ $tempColumns = array(
 
 t3lib_div::loadTCA('pages');
 t3lib_extMgm::addTCAcolumns('pages', $tempColumns, 1);
-//t3lib_extMgm::addToAllTCAtypes('pages','tx_robots_flags;;;;1-1-1', '', 'after:fe_login_mode');
-t3lib_extMgm::addToAllTCAtypes('pages','tx_robots_flags;;;;1-1-1', '1,2', 'before:TSconfig');
+t3lib_extMgm::addToAllTCAtypes('pages','tx_robots_flags;;;;1-1-1', '', 'after:fe_login_mode');
 ?>
