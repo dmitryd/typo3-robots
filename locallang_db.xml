@@ -8,7 +8,10 @@
 		<languageKey index="default" type="array">
 			<label index="pages.tx_robots_flags.I.0">Do not index this page</label>
 			<label index="pages.tx_robots_flags.I.1">Do not follow this page</label>
+			<label index="pages.tx_robots_flags.I.2">Apply to all subpages</label>
+			<label index="pages.tx_robots_inherit.I.0">Apply to all subpages</label>
 			<label index="pages.tx_robots_flags">Search engines policy:</label>
+			<label index="pages.tx_robots_inherit">Subpages:</label>
 		</languageKey>
 	</data>
 </T3locallang>

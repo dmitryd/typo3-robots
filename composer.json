@@ -1,0 +1,6 @@
+{
+    "name": "dschledermann/robots",
+    "description": "Adds checkboxes for meta/robots tag on the page",
+    "type": "typo3-cms-extension",
+    "version": "1.0.2"
+}
