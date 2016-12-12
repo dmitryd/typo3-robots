@@ -1,6 +1,10 @@
 <?php
-class tx_robots_tcemain_processdatamapclass {
-	   
+
+namespace Dschledermann\Robots\Hooks;
+
+
+class Tcemain {
+
 	function processDatamap_afterDatabaseOperations($status, $table, $id, &$fieldArray, &$pObj) {
 		if($table == 'pages'  && isset($fieldArray['tx_robots_flags']) && $status == 'update' ){
 			if($fieldArray['tx_robots_flags'] & 4){
@@ -11,7 +15,7 @@ class tx_robots_tcemain_processdatamapclass {
 			$this->updateChilds($id,$updateArray);
 		}
 	}
-	
+
 	function updateChilds($pid, $updateArray){
 		$GLOBALS['TYPO3_DB']->exec_UPDATEquery('pages','pid='.intval($pid),$updateArray);
 		$rows = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows('uid,pid','pages','pid='.intval($pid));
@@ -19,7 +23,6 @@ class tx_robots_tcemain_processdatamapclass {
 			foreach($rows as $row){
 				$this->updateChilds($row['uid'],$updateArray);
 			}
-		} 
+		}
 	}
 }
-?>
