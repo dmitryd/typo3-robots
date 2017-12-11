@@ -1,6 +1,11 @@
 {
-    "name": "dschledermann/robots",
-    "description": "Adds checkboxes for meta/robots tag on the page",
-    "type": "typo3-cms-extension",
-    "version": "2.0.0"
+ "name": "dschledermann/robots",
+ "description": "Adds checkboxes for meta/robots tag on the page",
+ "type": "typo3-cms-extension",
+ "version": "2.0.0",
+ "autoload": {
+  "psr-4": {
+   "Dschledermann\\Robots\\": "Classes/"
+  }
+ }
 }
